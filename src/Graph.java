@@ -9,7 +9,7 @@ public class Graph {
         int min;
 
         stack.add(this.map[0][0]);
-        while (stack.size() > 0) {
+        while (!stack.isEmpty()) {
             currentPlanet = stack.pop();
             for (Gate gate: currentPlanet.gates) {
                 gate.destination.currentCost = currentPlanet.currentCost + gate.cost;
