@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class KindSouls {
     public static void main(String[] args) {
-        int result = 0;
+        int result;
         String inputData = "";
         Graph map;
         try(BufferedReader input = new BufferedReader(new FileReader("input.txt"))) {

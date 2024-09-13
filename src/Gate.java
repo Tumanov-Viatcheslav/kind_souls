@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Gate {
     int cost;
     Node destination;
