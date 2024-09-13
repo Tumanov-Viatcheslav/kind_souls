@@ -9,14 +9,6 @@ public class Node {
         this.gates.addLast(new Gate(cost, destination));
     }
 
-    public void setCurrentCost(int currentCost) {
-        this.currentCost = currentCost;
-    }
-
-    public void setCost() {
-        //
-    }
-
     public Node(int currentCost) {
         this.currentCost = currentCost;
     }
