@@ -12,7 +12,11 @@ public class Graph {
         while (!stack.isEmpty()) {
             currentPlanet = stack.pop();
             for (Gate gate: currentPlanet.gates) {
-                gate.destination.currentCost = currentPlanet.currentCost + gate.cost;
+                if (!gate.destination.costCalculated)
+                    gate.destination.setCost(currentPlanet.currentCost + gate.cost);
+                else if ((currentPlanet.currentCost + gate.cost) < gate.destination.currentCost) {
+                    gate.destination.setCost(currentPlanet.currentCost + gate.cost);
+                }
                 stack.add(gate.destination);
             }
         }
